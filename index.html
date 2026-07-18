@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#061225">
+  <meta name="description" content="Ernest Tendon's Enitech Solutions smart digital business card.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/enitech-logo.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Ernest Tendon | Enitech Solutions</title>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div id="splash" class="splash" aria-hidden="true">
+    <img src="assets/enitech-logo.png" alt="">
+    <p>Secure • Automate • Innovate</p>
+  </div>
+
+  <main class="shell">
+    <section class="profile-card">
+      <div class="topbar">
+        <img class="brand-logo" src="assets/enitech-logo.png" alt="Enitech Solutions">
+        <button id="installBtn" class="small-button hidden" type="button">Add to Home Screen</button>
+      </div>
+
+      <div class="profile-area">
+        <div class="photo-wrap">
+          <img id="profilePhoto" src="assets/profile-placeholder.svg" alt="Ernest Tendon profile photo">
+          <label class="photo-button" for="photoInput">Add your photo</label>
+          <input id="photoInput" type="file" accept="image/*" hidden>
+        </div>
+
+        <p class="company">ENITECH SOLUTIONS</p>
+        <h1>Ernest Tendon</h1>
+        <p class="role">Cybersecurity <span>•</span> DevSecOps <span>•</span> Cloud Engineer</p>
+        <p class="location">Maryland, USA · Available for remote opportunities nationwide</p>
+
+        <div class="action-grid">
+          <a class="action primary" href="tel:+12404674037"><strong>Call</strong><span>240-467-4037</span></a>
+          <a class="action" href="mailto:eniten2014@gmail.com"><strong>Email</strong><span>Send a message</span></a>
+          <a class="action" href="https://www.linkedin.com/in/ernest-tendon-047b8117a" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Professional profile</span></a>
+          <a class="action" href="https://github.com/eniten" target="_blank" rel="noopener"><strong>GitHub</strong><span>Projects and code</span></a>
+          <a class="action" href="Ernest_Tendon.vcf" download><strong>Save Contact</strong><span>Add to your phone</span></a>
+          <a id="resumeBtn" class="action" href="resume.pdf" download><strong>Résumé</strong><span>Download PDF</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card">
+      <p class="kicker">ABOUT ME</p>
+      <h2>Security-focused technology professional</h2>
+      <p class="body-copy">
+        Cybersecurity and DevOps professional with hands-on experience in vulnerability management,
+        configuration compliance, cloud security, security controls, automation and enterprise risk reduction.
+        I translate complex findings into practical remediation guidance and help teams build secure,
+        repeatable technology processes.
+      </p>
+    </section>
+
+    <section class="glass-card">
+      <p class="kicker">CORE EXPERTISE</p>
+      <div class="skill-cloud">
+        <span>Vulnerability Management</span>
+        <span>FedRAMP</span>
+        <span>NIST 800-53</span>
+        <span>DISA STIG</span>
+        <span>CIS Benchmarks</span>
+        <span>Tenable</span>
+        <span>Nessus</span>
+        <span>Linux</span>
+        <span>Bash</span>
+        <span>AWS</span>
+        <span>Docker</span>
+        <span>Kubernetes</span>
+        <span>Terraform</span>
+        <span>Jenkins</span>
+        <span>Git &amp; GitHub</span>
+        <span>Splunk</span>
+        <span>Cloud Security</span>
+        <span>DevSecOps</span>
+      </div>
+    </section>
+
+    <section class="glass-card expertise-grid">
+      <article><div class="icon">🛡️</div><h3>Vulnerability Management</h3><p>Validation, triage, prioritization, remediation tracking and stakeholder communication.</p></article>
+      <article><div class="icon">☁️</div><h3>Cloud Security</h3><p>Secure cloud configurations, compliance evidence and risk-based control implementation.</p></article>
+      <article><div class="icon">🔐</div><h3>Security Compliance</h3><p>FedRAMP, NIST, DISA STIG, CIS baselines, POA&amp;M and continuous monitoring.</p></article>
+      <article><div class="icon">⚙️</div><h3>DevOps Automation</h3><p>Linux, Bash, Git, CI/CD, containers, infrastructure as code and repeatable workflows.</p></article>
+    </section>
+
+    <section class="glass-card owner-tools">
+      <details>
+        <summary>Card owner tools</summary>
+        <p>Your selected gallery photo is stored in this browser. To make the photo public for everyone, download it below, rename it <code>profile-photo.jpg</code>, place it inside the <code>assets</code> folder, and republish the site.</p>
+        <div class="owner-actions">
+          <button id="downloadPhotoBtn" class="small-button" type="button">Download selected photo</button>
+          <button id="removePhotoBtn" class="small-button secondary" type="button">Remove local photo</button>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      <img src="assets/enitech-logo.png" alt="">
+      <p>Secure • Automate • Innovate</p>
+      <small>© <span id="year"></span> Enitech Solutions</small>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

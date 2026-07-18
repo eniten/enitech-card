@@ -1,0 +1,88 @@
+:root{
+  --bg:#030812;--panel:rgba(7,19,39,.86);--panel2:rgba(12,32,61,.72);
+  --line:rgba(67,159,255,.25);--blue:#168fff;--cyan:#42d3ff;
+  --text:#f5f8ff;--muted:#a9b9cf;--shadow:0 28px 80px rgba(0,0,0,.45)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(150deg,#02050c,#061329 55%,#02050c);overflow-x:hidden
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.11;
+  background-image:linear-gradient(rgba(69,174,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(69,174,255,.16) 1px,transparent 1px);
+  background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)
+}
+.ambient{position:fixed;border-radius:999px;filter:blur(95px);opacity:.25;pointer-events:none}
+.ambient-one{width:360px;height:360px;background:#0968ff;top:-130px;left:-100px}
+.ambient-two{width:420px;height:420px;background:#00c8ff;right:-180px;top:38%}
+.shell{width:min(760px,calc(100% - 22px));margin:auto;padding:18px 0 38px}
+.profile-card,.glass-card{
+  border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,var(--panel),var(--panel2));
+  box-shadow:var(--shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)
+}
+.profile-card{overflow:hidden;position:relative}
+.profile-card:after{
+  content:"";position:absolute;left:8%;right:8%;top:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 25px var(--cyan)
+}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(85,159,255,.14)}
+.brand-logo{width:128px;height:68px;object-fit:contain;border-radius:12px}
+.profile-area{text-align:center;padding:26px 22px 30px}
+.photo-wrap{width:154px;height:154px;margin:0 auto 18px;position:relative}
+.photo-wrap img{
+  width:100%;height:100%;object-fit:cover;border-radius:50%;border:4px solid rgba(66,211,255,.82);
+  box-shadow:0 0 0 7px rgba(22,143,255,.12),0 0 42px rgba(38,177,255,.35)
+}
+.photo-button{
+  position:absolute;left:50%;bottom:-10px;transform:translateX(-50%);white-space:nowrap;cursor:pointer;
+  padding:8px 12px;border-radius:999px;color:white;font-size:.72rem;font-weight:800;
+  background:linear-gradient(135deg,#0876e8,#21b9ff);box-shadow:0 8px 22px rgba(16,142,255,.3)
+}
+.company{margin:28px 0 7px;color:var(--cyan);font-weight:850;letter-spacing:.18em;font-size:.78rem}
+h1{font-size:clamp(2.25rem,10vw,4.4rem);line-height:1;margin:0}
+.role{font-weight:700;color:#80caff;font-size:clamp(.95rem,3.8vw,1.15rem);margin:13px 0 0}
+.role span{color:var(--cyan);padding:0 3px}.location{color:var(--muted);font-size:.9rem;line-height:1.55}
+.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:24px}
+.action{
+  min-height:74px;padding:14px;border-radius:17px;text-decoration:none;color:var(--text);
+  display:flex;flex-direction:column;justify-content:center;border:1px solid rgba(102,179,255,.22);
+  background:rgba(255,255,255,.04);transition:.2s ease
+}
+.action:hover,.action:focus{transform:translateY(-2px);border-color:rgba(73,207,255,.65);background:rgba(255,255,255,.075)}
+.action strong{font-size:1rem}.action span{margin-top:4px;color:var(--muted);font-size:.78rem}
+.action.primary{background:linear-gradient(135deg,#0875ea,#1eafff);border-color:transparent;box-shadow:0 12px 30px rgba(7,132,241,.25)}
+.glass-card{padding:25px;margin-top:15px}
+.kicker{margin:0 0 9px;color:var(--cyan);font-size:.75rem;letter-spacing:.18em;font-weight:850}
+h2{margin:0 0 13px;font-size:clamp(1.45rem,6vw,2.05rem)}
+.body-copy,.expertise-grid p,.owner-tools p{color:var(--muted);line-height:1.72;margin-bottom:0}
+.skill-cloud{display:flex;flex-wrap:wrap;gap:9px}
+.skill-cloud span{padding:9px 12px;border-radius:999px;border:1px solid rgba(67,176,255,.26);background:rgba(18,111,203,.10);font-size:.84rem}
+.expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.expertise-grid article{padding:18px;border:1px solid rgba(87,166,255,.17);border-radius:18px;background:rgba(255,255,255,.025)}
+.expertise-grid .icon{font-size:1.55rem}.expertise-grid h3{margin:10px 0 0;font-size:1rem}.expertise-grid p{font-size:.84rem;margin-top:8px}
+summary{cursor:pointer;font-weight:800;color:#bce9ff}.owner-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.small-button{
+  border:1px solid rgba(105,188,255,.38);background:linear-gradient(135deg,#0a72de,#20afff);
+  color:#fff;border-radius:12px;padding:10px 13px;font:inherit;font-weight:750;cursor:pointer
+}
+.small-button.secondary{background:rgba(255,255,255,.05)}.hidden{display:none!important}
+footer{text-align:center;padding:30px 0 4px;color:var(--muted)}
+footer img{width:105px;height:55px;object-fit:contain;border-radius:10px}footer p{font-weight:750;color:#8ed8ff;margin:7px 0}
+.splash{
+  position:fixed;inset:0;z-index:20;display:grid;place-content:center;text-align:center;background:#030812;
+  transition:opacity .45s ease,visibility .45s ease
+}
+.splash.hide{opacity:0;visibility:hidden}.splash img{width:220px;border-radius:20px;animation:pulse 1s ease infinite alternate}
+.splash p{color:#7ed4ff;letter-spacing:.12em}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;padding:11px 16px;background:#0d2547;border:1px solid #3fbfff;border-radius:12px;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes pulse{to{transform:scale(1.035);filter:drop-shadow(0 0 18px rgba(66,211,255,.45))}}
+@media(max-width:540px){
+  .shell{width:min(100% - 12px,760px);padding-top:6px}.profile-card,.glass-card{border-radius:21px}
+  .profile-area{padding:24px 14px 22px}.glass-card{padding:21px 17px}.topbar{padding:10px 13px}
+  .brand-logo{width:110px;height:59px}.action-grid,.expertise-grid{grid-template-columns:1fr 1fr}
+  .action{min-height:70px;padding:12px 8px}.action span{font-size:.72rem}
+}
+@media(max-width:360px){.action-grid,.expertise-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.splash{display:none}}

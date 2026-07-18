@@ -1,0 +1,17 @@
+{
+  "name": "Ernest Tendon | Enitech Solutions",
+  "short_name": "Enitech Card",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#030812",
+  "theme_color": "#061225",
+  "description": "Ernest Tendon's smart digital business card.",
+  "icons": [
+    {
+      "src": "assets/enitech-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Tendon;Ernest;;;
+FN:Ernest Tendon
+ORG:Enitech Solutions
+TITLE:Cybersecurity | DevSecOps | Cloud Engineer
+TEL;TYPE=CELL:+12404674037
+EMAIL;TYPE=INTERNET:eniten2014@gmail.com
+URL:https://github.com/eniten
+URL:https://www.linkedin.com/in/ernest-tendon-047b8117a
+ADR;TYPE=WORK:;;;Maryland;;;USA
+NOTE:Cybersecurity, vulnerability management, FedRAMP, NIST, DISA STIG, Linux, Bash, AWS, Docker, Kubernetes, Terraform, Jenkins, Git, Splunk, Tenable and Nessus.
+END:VCARD
